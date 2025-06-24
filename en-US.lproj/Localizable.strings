@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  MySchdules
+
+  Created by RajayGoms on 6/23/25.
+  
+*/
+
+"login.userName" = "User Name"
+"login.password" = "Password"
+"login.signin" = "Sign In"
+"login.singup" = "Sign Up"
