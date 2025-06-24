@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct LogInView: View {
-    
+    @Binding var signInSuccess: Bool
     @State var email: String = ""
     @State var password: String = ""
     @State var showPassword: Bool = false
-    
+    var isSignInButtonDisabled: Bool { [email, password].contains(where:\.isEmpty)}
     var body: some View {
         VStack(alignment: .leading) {
             TextField("User Email ID", text: $email)
@@ -56,10 +56,12 @@ struct LogInView: View {
             }
             
             Button() {
-                
+                // your sign in action
+                signInSuccess.toggle()
             } label: {
                 Text("Sing In")
-                    .foregroundColor(.purple)
+                    .foregroundColor(isSignInButtonDisabled ? .gray : .purple)
+                    .fontWeight(.bold)
             }.frame(width: 300, height: 50)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
@@ -67,12 +69,15 @@ struct LogInView: View {
                         .padding([.leading, .trailing], 10)
                 )
                 .padding(.top, 20)
+                .disabled(isSignInButtonDisabled)
+            
             
             Button() {
-                
+                // do singup action
             } label: {
                 Text("Sing Up")
                     .foregroundColor(.purple)
+                    .fontWeight(.bold)
             }.frame(width: 300, height: 50)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
@@ -86,5 +91,5 @@ struct LogInView: View {
 }
 
 #Preview {
-    LogInView()
+    LogInView(signInSuccess: .constant(false))
 }

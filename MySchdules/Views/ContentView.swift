@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-   
-    
-    var body: some View {
-        VStack {
-            LogInView()
+    @State var signInSuccess = false
+        
+        var body: some View {
+            return Group {
+                if signInSuccess {
+                    HomeView(signInSuccess: $signInSuccess)
+                }
+                else {
+                    LogInView(signInSuccess: $signInSuccess)
+                }
+            }
         }
-        .padding()
-    }
 }
 
 #Preview {
