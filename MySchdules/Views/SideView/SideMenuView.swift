@@ -2,7 +2,7 @@
 //  SideMenuView.swift
 //  MySchdules
 //
-//  Created by RajayGoms on 6/27/25.
+//  Created by Rajendran Eshwaran on 6/27/25.
 //
 import SwiftUI
 
@@ -22,9 +22,10 @@ struct SideMenuView: View {
                                         }
                         .foregroundColor(.purple)
                 }.frame( maxWidth: .infinity, maxHeight: .infinity)
+                    .offset(x: 0, y: -250)
                 Spacer()
             }
-           // .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity)
             .background(.white)
             .padding(.top, 100)
                             
@@ -48,7 +49,7 @@ struct SideMenuView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.leading, 40)
-                .padding(.top, 40)
+                .padding(.top, 2)
                 .padding(.bottom, 30)
     }
 }

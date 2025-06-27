@@ -2,7 +2,7 @@
 //  SideView.swift
 //  MySchdules
 //
-//  Created by RajayGoms on 6/27/25.
+//  Created by Rajendran Eshwaran on 6/27/25.
 //
 
 import SwiftUI

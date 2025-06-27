@@ -2,7 +2,7 @@
 //  MySchdulesTests.swift
 //  MySchdulesTests
 //
-//  Created by RajayGoms on 6/19/25.
+//  Created by Rajendran Eshwaran on 6/19/25.
 //
 
 import Testing

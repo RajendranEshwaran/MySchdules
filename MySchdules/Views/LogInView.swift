@@ -2,7 +2,7 @@
 //  LogIn.swift
 //  MySchdules
 //
-//  Created by RajayGoms on 6/23/25.
+//  Created by Rajendran Eshwaran on 6/23/25.
 //
 
 import SwiftUI
