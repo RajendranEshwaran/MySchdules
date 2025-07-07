@@ -10,6 +10,9 @@ import SwiftUI
 struct HomeView: View {
     @Binding var signInSuccess: Bool
     @State var presentSideMenu = false
+    //@State var title: String
+   // @State var dateAndDay: String
+    @ObservedObject private var viewModel = ViewModels()
     var body: some View {
         ZStack() {
             Color.white.edgesIgnoringSafeArea(.all)
@@ -47,10 +50,12 @@ struct HomeView: View {
             Image(signInSuccess ? .personAuth : .personNotAuth)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 60, height: 60)
+                    .frame(width: 50, height: 50)
                     .background(.purple)
                     .clipShape(.circle)
-                    .offset(x:130, y:-350)
+                    .offset(x:130, y:-360)
+            
+            SchduleHeaderView()
             
             Button() {
                 
